@@ -1,0 +1,15 @@
+*~
+.gradle
+build
+bin
+*.classpath
+*.project
+*.settings
+.DS_Store
+target
+compare-results
+.cache
+out
+.idea
+.idea/dictionaries/peterwalker.xml
+*.iml
