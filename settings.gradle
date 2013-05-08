@@ -1,5 +1,5 @@
 
-include 'cycle-detection'
+include 'count-bits'
 
 rootProject.name = 'stuff'
 
