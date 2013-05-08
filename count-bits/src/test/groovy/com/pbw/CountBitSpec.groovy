@@ -1,17 +1,20 @@
 package com.pbw
 
-import spock.lang.Specification
+import spock.lang.*
 
 class CountBitSpec extends Specification {
-	def "counts the bits in an integer"(int i, int bits) {
+	@Unroll
+	def "counts the bits in an integer"(int value, int bits) {
 		expect:
-		BitCounter.numberOfBits(i) == bits
+		BitCounter.numberOfBits(value) == bits
 
 		where:
-		i | bits 
+		value | bits 
 		7 | 3 
 		8 | 1 
 		9 | 2
-		4294967296 | 32
+		2147483647 | 31
 	}
+	
+	
 }
