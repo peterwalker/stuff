@@ -3,6 +3,7 @@ package com.pbw
 import spock.lang.*
 
 class CountBitSpec extends Specification {
+	
 	@Unroll
 	def "counts the bits in an integer"(int value, int bits) {
 		expect:
@@ -15,6 +16,5 @@ class CountBitSpec extends Specification {
 		9 | 2
 		2147483647 | 31
 	}
-	
 	
 }
