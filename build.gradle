@@ -13,7 +13,14 @@ subprojects {
 	}
 }
 
+task testReport(type: TestReport){
+	destinationDir = file("$buildDir/reports")
+	reportOn(getTasksByName('test', true)) 
+}
+
 task clean (dependsOn: getTasksByName('clean', true))
 task build (dependsOn: getTasksByName('build', true))
 build.mustRunAfter clean
+build.dependsOn(testReport)
 task cleanAndBuild(dependsOn: [clean,build])
+
