@@ -1,5 +1,6 @@
 
 include 'count-bits'
+include 'count-change'
 
 rootProject.name = 'stuff'
 
