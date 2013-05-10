@@ -1,4 +1,5 @@
 
+include 'array-intersection'
 include 'count-bits'
 include 'count-change'
 include 'quicksort'
