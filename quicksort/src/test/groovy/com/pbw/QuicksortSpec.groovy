@@ -8,7 +8,7 @@ class QuicksortSpec extends Specification {
 	@Unroll
 	def "sort these arrays" (int[] unsorted, int[] sorted){
 		when:
-		qs.sort(unsorted)
+		qs.quicksort(unsorted)
 		
 		then:
 		qs.sorted == sorted

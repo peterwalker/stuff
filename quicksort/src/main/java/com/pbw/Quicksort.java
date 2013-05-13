@@ -3,16 +3,16 @@ package com.pbw;
 public class Quicksort {
 	int[] sorted;
 
-	void sort(int[] values) {
+	void quicksort(int[] values) {
 		this.sorted = values;
 		// Check for empty or null array
 		if (values == null || values.length == 0) {
 			return;
 		}
-		quicksort(0, values.length - 1);
+		partition(0, values.length - 1);
 	}
 
-	private void quicksort(int low, int high) {
+	private void partition(int low, int high) {
 		int i = low, j = high;
 		// Get the pivot element from the middle of the list
 		int pivot = sorted[low + (high - low) / 2];
@@ -43,10 +43,10 @@ public class Quicksort {
 		}
 		// Recurse left of the pivot
 		if (low < j)
-			quicksort(low, j);
+			partition(low, j);
 		// Recurse right of the pivot
 		if (i < high)
-			quicksort(i, high);
+			partition(i, high);
 	}
 
 	private void swap(int i, int j) {

@@ -1,5 +1,5 @@
-
 include 'array-intersection'
+include 'binary-search'
 include 'count-bits'
 include 'count-change'
 include 'quicksort'
