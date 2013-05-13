@@ -24,6 +24,6 @@ class BinarySearchSpec extends Specification {
 			10,
 			11,
 			12
-		]|9|87
+		]|9|8
 	}
 }
