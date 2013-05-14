@@ -1,7 +1,5 @@
 package com.pbw;
 
-//http://www.geeksforgeeks.org/detect-cycle-in-a-graph/
-
 public class Graph {
 	Node[] nodes;
 
@@ -15,7 +13,7 @@ public class Graph {
 	@SuppressWarnings("unused")
 	boolean isCyclicUtil(int v, boolean[] visited) {
 		System.out.println("Checking = " + v);
-		if (visited[v] == true) {
+		if (visited[v]) {
 			System.out.println("Cycle detected at node = " + v);
 			return true;
 		}

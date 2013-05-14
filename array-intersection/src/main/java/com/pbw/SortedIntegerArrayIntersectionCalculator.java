@@ -3,7 +3,7 @@ package com.pbw;
 import java.util.Arrays;
 
 public class SortedIntegerArrayIntersectionCalculator {
-//http://leetcode.com/2010/03/here-is-phone-screening-question-from.html
+	// http://leetcode.com/2010/03/here-is-phone-screening-question-from.html
 	public int[] intersection(int[] sortedlhs, int[] sortedrhs) {
 		int[] result = new int[Math.max(sortedlhs.length, sortedrhs.length)];
 		int count = 0;
