@@ -3,6 +3,7 @@ include 'binary-search'
 include 'count-bits'
 include 'count-change'
 include 'cycle-detection'
+include 'fizzbuzz'
 include 'quicksort'
 
 rootProject.name = 'stuff'
