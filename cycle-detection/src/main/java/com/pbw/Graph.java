@@ -4,26 +4,25 @@ package com.pbw;
 
 public class Graph {
 	Node[] nodes;
-	int nodeCount; // No. of vertices
 
 	public Graph(int nodeCount) {
-		this.nodeCount = nodeCount;
 		nodes = new Node[nodeCount];
 		for (int i = 0; i < nodeCount; ++i) {
 			nodes[i] = new Node();
 		}
 	}
 
+	@SuppressWarnings("unused")
 	boolean isCyclicUtil(int v, boolean[] visited) {
 		System.out.println("Checking = " + v);
 		if (visited[v] == true) {
 			System.out.println("Cycle detected at node = " + v);
 			return true;
 		}
-		// Mark the current node as visited and part of recursion stack
+		// Mark the current node as visited
 		visited[v] = true;
-		// Recurse for all the vertices adjacent to this vertex
-		for (int i = 0; i < nodes[v].adjacent.size(); ++i) {
+		// Recurse for all the node adjacent to this node
+		for (int i = 0; i < nodes[v].adjacent.size(); i++) {
 			return isCyclicUtil(nodes[v].adjacent.get(i), visited);
 		}
 		return false;
@@ -34,9 +33,8 @@ public class Graph {
 	}
 
 	public boolean isCyclic() {
-		for (int i = 0; i < nodeCount; i++) {
-			// Mark all the vertices as not visited
-			boolean[] visited = new boolean[nodeCount];
+		for (int i = 0; i < nodes.length; i++) {
+			boolean[] visited = new boolean[nodes.length];
 			if (isCyclicUtil(i, visited))
 				return true;
 		}
