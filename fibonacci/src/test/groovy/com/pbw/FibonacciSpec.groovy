@@ -5,7 +5,7 @@ import spock.lang.*
 class FibonacciSpec extends Specification {
 	Fibonacci fibonacci = new Fibonacci()
 	@Unroll
-	def "find element in sorted array" (int value, int[] sequence){
+	def "test fibonacci sequences" (int value, int[] sequence){
 		expect:
 		fibonacci.sequence(value)==sequence
 		where:

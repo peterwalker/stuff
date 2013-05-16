@@ -5,6 +5,7 @@ include 'count-change'
 include 'cycle-detection'
 include 'fizzbuzz'
 include 'fibonacci'
+include 'palindrome'
 include 'quicksort'
 
 rootProject.name = 'stuff'
