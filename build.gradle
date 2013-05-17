@@ -2,6 +2,7 @@ apply from: "$rootDir/gradle/wrapper.gradle"
 
 subprojects {
 	apply plugin: 'groovy'
+	apply plugin: 'jacoco'
     repositories {
         mavenCentral()
     }
@@ -11,6 +12,7 @@ subprojects {
 		}
 		testCompile 'org.codehaus.groovy:groovy:2.0.6'
 	}
+	jacocoTestReport.dependsOn(check)
 }
 
 task testReport(type: TestReport){
